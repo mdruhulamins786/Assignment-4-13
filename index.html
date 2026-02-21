@@ -34,11 +34,20 @@
     </style>
   </head>
 
+  <!-- icon -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
   <body class="bg-base-100">
     <div class="max-w-6xl mx-auto px-4 pt-4">
       <!-- header start -->
       <header>
-        <h3 class="font-bold text-xl sm:text-2xl md:text-3xl text-info-content">
+        <h3 class="font-bold text-xl text-info-content">
           Job Application Tracker
         </h3>
 
@@ -72,6 +81,149 @@
         </div>
       </header>
       <!-- header end -->
+
+      <!-- job list start -->
+      <div class="mt-8">
+        <h3 class="font-bold text-xl text-info-content">Available Jobs</h3>
+
+        <!-- job filter navbar -->
+
+        <nav class="py-4 flex gap-2">
+          <button class="btn btn-sm btn-outline btn-primary">All</button>
+          <button class="btn btn-sm btn-outline btn-success">Interview</button>
+          <button class="btn btn-sm btn-outline btn-error">Rejected</button>
+        </nav>
+
+        <!-- jon information -->
+        <section class="flex flex-col gap-8">
+          <div class="bg-base-200 p-4 rounded-lg shadow-md">
+            <div class="flex justify-between items-center">
+              <div>
+                <h4 class="font-semibold text-xl text-info-content">
+                  Mobile First Corp
+                </h4>
+                <p class="text-gray-500">React Native Developer</p>
+              </div>
+
+              <!-- icon -->
+
+              <div>
+                <i
+                  class="fa fa-trash text-gray-500 cursor-pointer p-3 text-center hover:text-red-500 transition duration-200"
+                ></i>
+              </div>
+            </div>
+
+            <div>
+              <p
+                class="flex flex-col sm:flex-row gap-2 text-sm text-gray-500 my-4"
+              >
+                <span>Remote</span>
+                <span>$130000 - $175000</span>
+                <span>Full-time</span>
+              </p>
+            </div>
+
+            <button class="btn btn-sm bg-primary-content">Not Applied</button>
+            <p class="text-gray-500 mt-1">
+              Build cross-platform mobile applications using React Native. Work
+              on products used by millions of users worldwide.
+            </p>
+            <div class="mt-5">
+              <button class="btn btn-sm btn-outline btn-success">
+                Interview
+              </button>
+              <button class="btn btn-sm btn-outline btn-error">Rejected</button>
+            </div>
+          </div>
+
+          <!-- 2 -->
+
+          <div class="bg-base-200 p-4 rounded-lg shadow-md">
+            <div class="flex justify-between items-center">
+              <div>
+                <h4 class="font-semibold text-xl text-info-content">
+                  Mobile First Corp
+                </h4>
+                <p class="text-gray-500">React Native Developer</p>
+              </div>
+
+              <!-- icon -->
+
+              <div>
+                <i
+                  class="fa fa-trash text-gray-500 cursor-pointer p-3 text-center hover:text-red-500 transition duration-200"
+                ></i>
+              </div>
+            </div>
+
+            <div>
+              <p
+                class="flex flex-col sm:flex-row gap-2 text-sm text-gray-500 my-4"
+              >
+                <span>Remote</span>
+                <span>$130000 - $175000</span>
+                <span>Full-time</span>
+              </p>
+            </div>
+
+            <button class="btn btn-sm bg-primary-content">Not Applied</button>
+            <p class="text-gray-500 mt-1">
+              Build cross-platform mobile applications using React Native. Work
+              on products used by millions of users worldwide.
+            </p>
+            <div class="mt-5">
+              <button class="btn btn-sm btn-outline btn-success">
+                Interview
+              </button>
+              <button class="btn btn-sm btn-outline btn-error">Rejected</button>
+            </div>
+          </div>
+
+          <!-- 3 -->
+          <div class="bg-base-200 p-4 rounded-lg shadow-md">
+            <div class="flex justify-between items-center">
+              <div>
+                <h4 class="font-semibold text-xl text-info-content">
+                  Mobile First Corp
+                </h4>
+                <p class="text-gray-500">React Native Developer</p>
+              </div>
+
+              <!-- icon -->
+
+              <div>
+                <i
+                  class="fa fa-trash text-gray-500 cursor-pointer p-3 text-center hover:text-red-500 transition duration-200"
+                ></i>
+              </div>
+            </div>
+
+            <div>
+              <p
+                class="flex flex-col sm:flex-row gap-2 text-sm text-gray-500 my-4"
+              >
+                <span>Remote</span>
+                <span>$130000 - $175000</span>
+                <span>Full-time</span>
+              </p>
+            </div>
+
+            <button class="btn btn-sm bg-primary-content">Not Applied</button>
+            <p class="text-gray-500 mt-1">
+              Build cross-platform mobile applications using React Native. Work
+              on products used by millions of users worldwide.
+            </p>
+            <div class="mt-5">
+              <button class="btn btn-sm btn-outline btn-success">
+                Interview
+              </button>
+              <button class="btn btn-sm btn-outline btn-error">Rejected</button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- job list end -->
     </div>
   </body>
 </html>
