@@ -59,7 +59,7 @@
           <div class="card bg-base-200 shadow-md">
             <div class="card-body">
               <h2 class="card-title text-sm">Total</h2>
-              <p class="font-bold text-2xl">0</p>
+              <p id="total-count" class="font-bold text-2xl">0</p>
             </div>
           </div>
 
@@ -67,7 +67,9 @@
           <div class="card bg-base-200 shadow-md">
             <div class="card-body">
               <h2 class="card-title text-sm">Interview</h2>
-              <p class="font-bold text-2xl text-green-500">0</p>
+              <p id="interview-count" class="font-bold text-2xl text-green-500">
+                0
+              </p>
             </div>
           </div>
 
@@ -75,7 +77,9 @@
           <div class="card bg-base-200 shadow-md">
             <div class="card-body">
               <h2 class="card-title text-sm">Rejected</h2>
-              <p class="font-bold text-2xl text-red-500">0</p>
+              <p id="rejected-count" class="font-bold text-2xl text-red-500">
+                0
+              </p>
             </div>
           </div>
         </div>
@@ -89,65 +93,13 @@
         <!-- job filter navbar -->
 
         <nav class="py-4 flex gap-2">
-          <button class="btn btn-sm btn-outline btn-primary">All</button>
-          <button class="btn btn-sm btn-outline btn-success">Interview</button>
-          <button class="btn btn-sm btn-outline btn-error">Rejected</button>
+          <button id="all-data" class="btn btn-sm btn-outline btn-primary">All</button>
+          <button id="interview-data" class="btn btn-sm btn-outline btn-success">Interview</button>
+          <button id="rejected-data" class="btn btn-sm btn-outline btn-error">Rejected</button>
         </nav>
 
         <!-- jon information -->
-        <section id="job-list" class="flex flex-col gap-8">
-          <!-- card -->
-          <div class="bg-base-200 p-4 rounded-lg shadow-md">
-            <div class="flex justify-between items-center">
-              <div>
-                <h4 class="font-semibold text-xl text-info-content">
-                  Mobile First Corp
-                </h4>
-                <p class="text-gray-500">React Native Developer</p>
-              </div>
-
-              <!-- icon -->
-
-              <div>
-                <i
-                  class="fa fa-trash text-gray-500 cursor-pointer p-3 text-center hover:text-red-500 transition duration-200"
-                ></i>
-              </div>
-            </div>
-
-            <div>
-              <p
-                class="flex flex-row items-center text-center flex-wrap gap-2 text-sm my-4"
-              >
-                <span class="border-2 border-gray-200 rounded-full py-2 px-4"
-                  >Remote</span
-                >
-                <span class="border-2 border-gray-200 rounded-full py-2 px-4"
-                  >$130000 - $175000</span
-                >
-                <span class="border-2 border-gray-200 rounded-full py-2 px-4"
-                  >Full-time</span
-                >
-              </p>
-            </div>
-
-            <p
-              class="inline-block bg-primary-content text-sm px-3 py-1 outline outline-gray-400 text-gray-700 rounded font-semibold"
-            >
-              Pending Interview
-            </p>
-            <p class="text-gray-500 mt-1">
-              Build cross-platform mobile applications using React Native. Work
-              on products used by millions of users worldwide.
-            </p>
-            <div class="mt-5">
-              <button class="btn btn-sm btn-outline btn-success">
-                Interview
-              </button>
-              <button class="btn btn-sm btn-outline btn-error">Rejected</button>
-            </div>
-          </div>
-        </section>
+        <section id="job-list" class="flex flex-col gap-8"></section>
       </div>
       <!-- job list end -->
     </div>
