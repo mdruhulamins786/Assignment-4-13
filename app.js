@@ -123,17 +123,21 @@ const jobListContainer = document.getElementById("job-list");
 const totalCountEl = document.getElementById("total-count");
 const interviewCountEl = document.getElementById("interview-count");
 const rejectedCountEl = document.getElementById("rejected-count");
+const countItems = document.getElementById("count-items");
 
 // filter jobs
-document
-  .getElementById("all-data")
-  .addEventListener("click", () => renderJobs(jobs));
-document
-  .getElementById("interview-data")
-  .addEventListener("click", () => renderJobs(interviews()));
-document
-  .getElementById("rejected-data")
-  .addEventListener("click", () => renderJobs(rejectedData()));
+document.getElementById("all-data").addEventListener("click", () => {
+  (renderJobs(jobs),
+    (countItems.innerHTML = `<span class='text-secondary'>All Jobs - ${jobs.length}</span>`));
+});
+document.getElementById("interview-data").addEventListener("click", () => {
+  (renderJobs(interviews()),
+    (countItems.innerHTML = `<span class='text-success'>Interview - ${interviews().length}</span>`));
+});
+document.getElementById("rejected-data").addEventListener("click", () => {
+  (renderJobs(rejectedData()),
+    (countItems.innerHTML = `<span class='text-error'>Rejected - ${rejectedData().length}</span>`));
+});
 
 // display data
 function updateCounts() {
@@ -163,6 +167,7 @@ function updateJobStatus(id, status) {
 // render jobs
 function renderJobs(data) {
   jobListContainer.innerHTML = "";
+  countItems.innerHTML = `<span class='text-secondary'>All Jobs - ${jobs.length}</span>`;
 
   if (data.length == 0) {
     jobListContainer.innerHTML = ` <div class="flex flex-col justify-center items-center text-center h-60">
@@ -222,9 +227,6 @@ function renderJobs(data) {
       data.splice(index, 1);
       renderJobs(data);
     });
-
-    const p = document.createElement("p");
-    p.innerText = "Ruhul";
 
     jobListContainer.appendChild(jobCard);
   });
