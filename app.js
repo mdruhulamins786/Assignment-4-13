@@ -164,6 +164,14 @@ function updateJobStatus(id, status) {
 function renderJobs(data) {
   jobListContainer.innerHTML = "";
 
+  if (data.length == 0) {
+    jobListContainer.innerHTML = ` <div class="flex flex-col justify-center items-center text-center h-60">
+                                      <img src="./picture/jobs.png" alt="" />
+                                      <h3 class="font-semibold text-gray-700 text-xl">No jobs available</h3>
+                                      <p class="text-sm text-gray-500">Check back soon for new job opportunities</p>
+                                    </div>`;
+  }
+
   data.forEach((job) => {
     const jobCard = document.createElement("div");
     jobCard.className = "bg-base-200 p-4 rounded-lg shadow-md";
@@ -214,6 +222,9 @@ function renderJobs(data) {
       data.splice(index, 1);
       renderJobs(data);
     });
+
+    const p = document.createElement("p");
+    p.innerText = "Ruhul";
 
     jobListContainer.appendChild(jobCard);
   });
